@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Roboto font-family */
+$font-family: "Roboto", sans-serif;
+
+/* Roboto font-family */
+$font-style: normal;
+
+/* Robot Mixins */
+@mixin roboto-thin($font-size: 16px) {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-size: $font-size;
+    font-weight: 100;
+}
+
+@mixin roboto-light($font-size: 16px) {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-size: $font-size;
+    font-weight: 300;
+}
+
+@mixin roboto-regular($font-size: 16px) {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-size: $font-size;
+    font-weight: 400;
+}
+
+@mixin roboto-medium($font-size: 16px) {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-size: $font-size;
+    font-weight: 500;
+}
+
+@mixin roboto-bold($font-size: 16px) {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-size: $font-size;
+    font-weight: 700;
+}
+
+@mixin roboto-black($font-size: 16px) {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-size: $font-size;
+    font-weight: 700;
+}
