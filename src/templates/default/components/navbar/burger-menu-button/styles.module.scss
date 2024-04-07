@@ -1,0 +1,42 @@
+@import "../../colours/colors.module.scss";
+
+/* Burger Menu Styles */
+.BurgerMenuButton {
+    all: unset;
+    width: 2rem;
+    aspect-ratio: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+
+    & div {
+        width: 90%;
+        height: 0.25rem;
+        opacity: 1;
+        background-color: $nav-btn-color;
+        transition:
+            translate 0.2s ease-in-out,
+            rotate 0.2s ease-in-out,
+            opacity 0.2s ease-in-out;
+    }
+
+    &_isOpen {
+        & div {
+            &:first-of-type {
+                rotate: 45deg;
+                translate: 0 0.7rem;
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:last-of-type {
+                rotate: -45deg;
+                translate: 0 -0.7rem;
+            }
+        }
+    }
+}

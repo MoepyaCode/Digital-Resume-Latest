@@ -3,11 +3,16 @@
   padding: 0%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 #root {
-  max-width: 1280px;
+  position: relative;
+  min-height: inherit;
 }
