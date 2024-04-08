@@ -3,7 +3,7 @@
 
 .Default {
     &_navBar {
-        position: fixed;
+        position: relative;
         width: 100%;
         display: flex;
         flex-flow: row nowrap;
@@ -16,7 +16,7 @@
         &_landingPageBtn {
             all: unset;
             @include poppins-medium(30px);
-            color: $color-primary;
+            color: $primary-color;
             cursor: pointer;
         }
 
@@ -43,7 +43,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    color: $color-primary;
+                    color: $primary-color;
                     cursor: pointer;
 
                     &::after {

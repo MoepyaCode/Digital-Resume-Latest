@@ -1,6 +1,6 @@
 /* Header Styles */
-@import '../../components/colors/colors.module.scss';
-@import '../../components/fonts/fonts.module.scss';
+@import '@digital-resume/templates/default/components/colors/colors.module.scss';
+@import '@digital-resume/templates/default/components/fonts/fonts.module.scss';
 
 .Default {
     &_header {
@@ -16,7 +16,7 @@
 
         &_heading {
             @include poppins-semibold(2.5rem);
-            color: $color-primary;
+            color: $primary-color;
         }
     }
 }

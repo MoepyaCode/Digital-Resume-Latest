@@ -18,6 +18,7 @@ export function Default() {
       {/* App Sections */}
       <Sections.Home />
       <Sections.About />
+      <Sections.Experience />
       
     </React.Fragment>
   );

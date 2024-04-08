@@ -1,0 +1,23 @@
+@import "@digital-resume/templates/default/components/colors/colors.module.scss";
+@import "@digital-resume/templates/default/components/fonts/fonts.module.scss";
+
+.Default {
+
+    &_experience {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        &_contentWrapper {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+    }
+
+}

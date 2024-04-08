@@ -15,4 +15,12 @@ body {
 #root {
   position: relative;
   min-height: inherit;
+
+  & p {
+    pointer-events: none;
+  }
+
+  & h1 {
+    pointer-events: none;
+  }
 }

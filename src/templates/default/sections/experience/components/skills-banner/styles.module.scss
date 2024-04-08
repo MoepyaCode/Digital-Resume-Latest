@@ -1,0 +1,58 @@
+@import "@digital-resume/templates/default/components/fonts/fonts.module.scss";
+@import "@digital-resume/templates/default/components/colors/colors.module.scss";
+
+.SkillsBanner {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid $secondary-color;
+    border-radius: 30px;
+    padding: 1.25rem;
+    width: min(25rem, 80%);
+
+    & h3 {
+        @include poppins-semibold(1.5rem);
+        color: $secondary-color;
+    }
+
+    &_skillsWrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 80%;
+
+        &_fieldWrapper {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: start;
+            gap: 1rem;
+            width: 45%;
+
+            & svg {
+                position: relative;
+                top: 5px;
+                color: $primary-color;
+                font-size: 1.25rem;
+            }
+
+            &_textWrapper {
+                & p {
+
+                    &:first-of-type {
+                        @include poppins-bold(1rem);
+                        color: $primary-color;
+                    }
+
+                    &:last-of-type {
+                        @include poppins-regular(.9rem);
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}

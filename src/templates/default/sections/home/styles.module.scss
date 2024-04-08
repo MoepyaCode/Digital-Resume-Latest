@@ -1,5 +1,5 @@
-@import "../../components/colors/colors.module.scss";
-@import "../../components/fonts/fonts.module.scss";
+@import "@digital-resume/templates/default/components/colors/colors.module.scss";
+@import "@digital-resume/templates/default/components/fonts/fonts.module.scss";
 
 .Default {
     &_home {
@@ -8,6 +8,7 @@
         justify-content: center;
         align-items: center;
         gap: 2.5rem;
+        padding: 0 !important;
 
         &_image {
             width: min(20rem, 80%);
@@ -30,7 +31,7 @@
 
             &_name {
                 @include poppins-bold(2.3rem);
-                color: $color-primary;
+                color: $primary-color;
                 white-space: nowrap;
             }
 
@@ -52,17 +53,17 @@
                     margin: 0.5rem 0;
                     padding: 0.6rem 0.6rem;
                     letter-spacing: 0;
-                    border: 2px solid $color-primary;
+                    border: 2px solid $primary-color;
                     border-radius: 30px;
                     cursor: pointer;
                 }
 
                 &_cvButton {
-                    color: $color-primary;
+                    color: $primary-color;
                 }
 
                 &_contactButton {
-                    background-color: $color-primary;
+                    background-color: $primary-color;
                     color: $background-color;
                 }
             }
@@ -76,12 +77,12 @@
 
                 & a {
                     @include poppins-semibold(2.75rem);
-                    color: $color-primary;
+                    color: $primary-color;
                     text-decoration: none;
                     cursor: pointer;
 
                     &:first-of-type {
-                        background-color: $color-primary;
+                        background-color: $primary-color;
                         border-radius: 50%;
                         display: flex;
                         justify-content: center;
@@ -99,15 +100,15 @@
 @media screen and (max-width: 700px) {
     .Default {
         &_home {
-            gap: 0;
+            gap: 1rem;
         }
     }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 700px ) and (max-width: 700px) {
     .Default {
         &_home {
-            padding: 2rem 0;
+            padding: 2rem 0 !important;
         }
     }
 }

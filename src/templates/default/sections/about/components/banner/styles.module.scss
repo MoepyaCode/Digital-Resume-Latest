@@ -1,5 +1,5 @@
-@import "../../../../components/colors/colors.module.scss";
-@import "../../../../components/fonts/fonts.module.scss";
+@import "@digital-resume/templates/default/components/colors/colors.module.scss";
+@import "@digital-resume/templates/default/components/fonts/fonts.module.scss";
 
 .Banner {
     display: flex;
@@ -13,13 +13,13 @@
     gap: .25rem;
 
     & svg {
-        color: $color-primary;
+        color: $primary-color;
         font-size: x-large;
     }
 
     &_title {
         @include poppins-bold(1rem);
-        color: $color-primary;
+        color: $primary-color;
     }
 
     &_detail {

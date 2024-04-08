@@ -1,5 +1,5 @@
-@import "../../components/colors/colors.module.scss";
-@import "../../components/fonts/fonts.module.scss";
+@import "@digital-resume/templates/default/components/colors/colors.module.scss";
+@import "@digital-resume/templates/default/components/fonts/fonts.module.scss";
 
 .Default {
 
@@ -41,7 +41,7 @@
                 &_text {
                     @include poppins-regular;
                     width: 80%;
-                    color: $color-primary;
+                    color: $primary-color;
                     text-align: justify;
                 }
             }

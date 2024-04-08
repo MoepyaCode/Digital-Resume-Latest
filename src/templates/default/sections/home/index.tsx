@@ -5,7 +5,7 @@ import {
   Image,
   Section,
   Wrapper
-} from "../../components";
+} from "@digital-resume/templates/default/components";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";

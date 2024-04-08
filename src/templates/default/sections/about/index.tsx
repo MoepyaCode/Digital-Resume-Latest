@@ -8,6 +8,10 @@ import { faCertificate } from '@fortawesome/free-solid-svg-icons'
 const SectionInfo = {
   heading: "About Me",
   subText: "Get to know me",
+  bannerDetails: [
+    '2+ years',
+    'Frontend Development',
+  ]
 }
 
 export function About() {
@@ -30,20 +34,14 @@ export function About() {
           >
             <Banner
               title='Experience'
-              details={[
-                '2+ years',
-                'Frontend Development',
-              ]}
+              details={SectionInfo.bannerDetails}
             >
               <FontAwesomeIcon icon={faCertificate} />
             </Banner>
 
             <Banner
               title='Experience'
-              details={[
-                '2+ years',
-                'Frontend Development',
-              ]}
+              details={SectionInfo.bannerDetails}
             >
               <FontAwesomeIcon icon={faCertificate} />
             </Banner>
@@ -55,6 +53,6 @@ export function About() {
           </p>
         </Wrapper>
       </Wrapper>
-    </Section>
+    </Section >
   )
 }

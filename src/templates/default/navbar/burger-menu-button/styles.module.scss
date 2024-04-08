@@ -1,5 +1,5 @@
-@import "../../components/colors/colors.module.scss";
-@import "../../components/colors/colors.module.scss";
+@import "@digital-resume/templates/default/components/colors/colors.module.scss";
+@import "@digital-resume/templates/default/components/colors/colors.module.scss";
 
 /* Burger Menu Styles */
 .BurgerMenuButton {
@@ -16,7 +16,7 @@
         width: 90%;
         height: 0.25rem;
         opacity: 1;
-        background-color: $color-primary;
+        background-color: $primary-color;
         transition:
             translate 0.2s ease-in-out,
             rotate 0.2s ease-in-out,
