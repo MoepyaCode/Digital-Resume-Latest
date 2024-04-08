@@ -1,16 +1,24 @@
-import React from 'react'
-import Styles from './styles.module.scss'
-import { NavBar, Section } from './components'
+import React from "react";
+import { NavBar } from "./navbar";
+import { Sections } from "./sections";
 
+const tempData = {
+  name: "John Doe",
+  greeting: "Hello I'm",
+  workType: "Web Developer",
+}
 
 export function Default() {
 
   return (
     <React.Fragment>
-      <NavBar name='John Doe' />
-      <Section className='LandingPage'>
-        <h1></h1>
-      </Section>
+      {/* Navigation Bar */}
+      <NavBar name={tempData.name} />
+
+      {/* App Sections */}
+      <Sections.Home />
+      <Sections.About />
+      
     </React.Fragment>
-  )
+  );
 }

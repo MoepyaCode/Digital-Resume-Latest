@@ -2,8 +2,8 @@ import React from 'react'
 import Styles from './styles.module.scss'
 
 type Props = {
-  className: string
-  children: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }
 
 export function Section(props: Props) {

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Styles from './styles.module.scss'
 import { BurgerMenuButton } from './burger-menu-button'
 
@@ -29,8 +28,8 @@ export function NavBar(props: Props) {
   }, [])
 
   return (
-    <nav className={Styles.DefaultNavBar}>
-      <button className={Styles.DefaultNavBar_landingPageBtn}>
+    <nav className={Styles.Default_navBar}>
+      <button className={Styles.Default_navBar_landingPageBtn}>
         {props.name}
       </button>
 

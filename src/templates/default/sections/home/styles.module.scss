@@ -1,0 +1,105 @@
+@import "../../components/colours/colors.module.scss";
+@import "../../components/fonts/fonts.module.scss";
+
+.Default {
+    &_home {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: min(5rem, 10%);
+
+        &_image {
+            width: min(20rem, 80%);
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        &_introWrapper {
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            &_greeting {
+                @include poppins-semibold(1.1rem);
+                color: $nav-btn-hover-color;
+            }
+
+            &_name {
+                @include poppins-bold(2.3rem);
+                color: $nav-btn-color;
+                white-space: nowrap;
+            }
+
+            &_workType {
+                @include poppins-semibold(2.05rem);
+                letter-spacing: 0px;
+                color: $nav-btn-hover-color;
+            }
+
+            &_buttonWrapper {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                & button {
+                    @include poppins-semibold(0.9rem);
+                    margin: 0.5rem 0;
+                    padding: 0.6rem 0.6rem;
+                    letter-spacing: 0;
+                    border: 2px solid $nav-btn-color;
+                    border-radius: 30px;
+                    cursor: pointer;
+                }
+
+                &_cvButton {
+                    color: $nav-btn-color;
+                }
+
+                &_contactButton {
+                    background-color: $nav-btn-color;
+                    color: $background-color;
+                }
+            }
+
+            &_linksWrapper {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                & a {
+                    @include poppins-semibold(2.75rem);
+                    color: $nav-btn-color;
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    &:first-of-type {
+                        background-color: $nav-btn-color;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.75rem;
+                        padding: 0.5rem;
+                        color: $background-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .Default {
+        &_home {
+            padding: 2.5rem 0;
+        }
+    }
+}
