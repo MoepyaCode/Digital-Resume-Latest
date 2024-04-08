@@ -1,8 +1,9 @@
 @import '../fonts/fonts.module.scss';
-@import '../colours/colors.module.scss';
+@import '../colors/colors.module.scss';
 
 .Section {
     width: auto;
-    height: calc(100dvh - 5rem);
+    min-height: calc(100dvh);
     background-color: $background-color;
 }
+

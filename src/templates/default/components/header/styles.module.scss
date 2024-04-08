@@ -1,0 +1,22 @@
+/* Header Styles */
+@import '../../components/colors/colors.module.scss';
+@import '../../components/fonts/fonts.module.scss';
+
+.Default {
+    &_header {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        &_subText {
+            @include poppins-medium(1.1rem);
+            color: $secondary-color
+        }
+
+        &_heading {
+            @include poppins-semibold(2.5rem);
+            color: $color-primary;
+        }
+    }
+}

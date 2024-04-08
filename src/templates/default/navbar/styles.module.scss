@@ -1,20 +1,22 @@
 @import "../components/fonts/fonts.module.scss";
-@import "../components/colours/colors.module.scss";
+@import "../components/colors/colors.module.scss";
 
 .Default {
     &_navBar {
-        position: relative;
+        position: fixed;
+        width: 100%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;
         align-items: center;
         background-color: $background-color;
         height: 5rem;
+        z-index: 1000;
 
         &_landingPageBtn {
             all: unset;
             @include poppins-medium(30px);
-            color: $nav-btn-color;
+            color: $color-primary;
             cursor: pointer;
         }
 
@@ -41,7 +43,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    color: $nav-btn-color;
+                    color: $color-primary;
                     cursor: pointer;
 
                     &::after {
@@ -49,14 +51,14 @@
                         position: absolute;
                         width: 0;
                         height: 0.25rem;
-                        background-color: $nav-btn-hover-color;
+                        background-color: $secondary-color;
                         left: 0;
                         bottom: 0;
                         transition: width 0.2s ease-in-out;
                     }
 
                     &:hover {
-                        color: $nav-btn-hover-color;
+                        color: $secondary-color;
 
                         &::after {
                             width: 100%;
@@ -88,7 +90,7 @@
                         }
 
                         &:hover {
-                            color: $nav-btn-hover-color;
+                            color: $secondary-color;
                         }
                     }
                 }

@@ -1,5 +1,5 @@
-@import "../../components/colours/colors.module.scss";
-@import "../../components/colours/colors.module.scss";
+@import "../../components/colors/colors.module.scss";
+@import "../../components/colors/colors.module.scss";
 
 /* Burger Menu Styles */
 .BurgerMenuButton {
@@ -16,7 +16,7 @@
         width: 90%;
         height: 0.25rem;
         opacity: 1;
-        background-color: $nav-btn-color;
+        background-color: $color-primary;
         transition:
             translate 0.2s ease-in-out,
             rotate 0.2s ease-in-out,

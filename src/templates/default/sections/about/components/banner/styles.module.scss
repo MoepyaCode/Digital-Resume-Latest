@@ -1,0 +1,30 @@
+@import "../../../../components/colors/colors.module.scss";
+@import "../../../../components/fonts/fonts.module.scss";
+
+.Banner {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border: 2px solid $secondary-color;
+    border-radius: 30px;
+    width: 12.5rem;
+    gap: .25rem;
+
+    & svg {
+        color: $color-primary;
+        font-size: x-large;
+    }
+
+    &_title {
+        @include poppins-bold(1rem);
+        color: $color-primary;
+    }
+
+    &_detail {
+        @include poppins-medium(.75rem);
+        color: $secondary-color;
+    }
+}
+

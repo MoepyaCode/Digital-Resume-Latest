@@ -1,4 +1,5 @@
 import { Button } from "./button";
+import { Header } from "./header";
 import { Image } from "./image";
 import { Section } from "./section";
 import { Wrapper } from "./wrapper";
@@ -8,4 +9,5 @@ export {
     Image,
     Wrapper,
     Button,
+    Header,
 }

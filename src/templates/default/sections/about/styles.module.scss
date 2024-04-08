@@ -1,0 +1,75 @@
+@import "../../components/colors/colors.module.scss";
+@import "../../components/fonts/fonts.module.scss";
+
+.Default {
+
+    &_about {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 2rem;
+
+        &_contentWrapper {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+
+            &_image {
+                width: min(22.5rem, 80%);
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 30px;
+            }
+
+            &_detailsWrapper {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                gap: 2rem;
+
+                &_bannersWrapper {
+                    display: flex;
+                    flex-flow: row wrap; 
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                }
+
+                &_text {
+                    @include poppins-regular;
+                    width: 80%;
+                    color: $color-primary;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .Default {
+        &_about {
+            &_contentWrapper {
+    
+                &_image {
+                }
+    
+                &_detailsWrapper {
+                    width: 80%;
+    
+                    &_bannersWrapper {
+                     
+                    }
+    
+                    &_text {
+                       text-align: justify;
+                       width: 90%;
+                    }
+                }
+            }
+        } 
+    }
+}

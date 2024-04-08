@@ -1,4 +1,4 @@
-@import "../../components/colours/colors.module.scss";
+@import "../../components/colors/colors.module.scss";
 @import "../../components/fonts/fonts.module.scss";
 
 .Default {
@@ -7,7 +7,7 @@
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-        gap: min(5rem, 10%);
+        gap: 2.5rem;
 
         &_image {
             width: min(20rem, 80%);
@@ -25,19 +25,19 @@
 
             &_greeting {
                 @include poppins-semibold(1.1rem);
-                color: $nav-btn-hover-color;
+                color: $secondary-color;
             }
 
             &_name {
                 @include poppins-bold(2.3rem);
-                color: $nav-btn-color;
+                color: $color-primary;
                 white-space: nowrap;
             }
 
             &_workType {
                 @include poppins-semibold(2.05rem);
                 letter-spacing: 0px;
-                color: $nav-btn-hover-color;
+                color: $secondary-color;
             }
 
             &_buttonWrapper {
@@ -52,17 +52,17 @@
                     margin: 0.5rem 0;
                     padding: 0.6rem 0.6rem;
                     letter-spacing: 0;
-                    border: 2px solid $nav-btn-color;
+                    border: 2px solid $color-primary;
                     border-radius: 30px;
                     cursor: pointer;
                 }
 
                 &_cvButton {
-                    color: $nav-btn-color;
+                    color: $color-primary;
                 }
 
                 &_contactButton {
-                    background-color: $nav-btn-color;
+                    background-color: $color-primary;
                     color: $background-color;
                 }
             }
@@ -76,12 +76,12 @@
 
                 & a {
                     @include poppins-semibold(2.75rem);
-                    color: $nav-btn-color;
+                    color: $color-primary;
                     text-decoration: none;
                     cursor: pointer;
 
                     &:first-of-type {
-                        background-color: $nav-btn-color;
+                        background-color: $color-primary;
                         border-radius: 50%;
                         display: flex;
                         justify-content: center;
@@ -99,7 +99,15 @@
 @media screen and (max-width: 700px) {
     .Default {
         &_home {
-            padding: 2.5rem 0;
+            gap: 0;
+        }
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .Default {
+        &_home {
+            padding: 2rem 0;
         }
     }
 }
