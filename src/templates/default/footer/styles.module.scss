@@ -6,6 +6,7 @@
     &_footer {
         @include section-setup;
         padding-bottom: 2rem;
+        background-color: $background-color;
 
         &_buttonsWrapper {
             display: flex;
