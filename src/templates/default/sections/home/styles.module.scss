@@ -57,15 +57,29 @@
                     border: 2px solid $primary-color;
                     border-radius: 30px;
                     cursor: pointer;
+                    transition:
+                        background-color .2s ease-in-out,
+                        color .2s ease-in-out;
                 }
 
                 &_cvButton {
+                    background-color: transparent;
                     color: $primary-color;
+
+                    &:hover {
+                        background-color: $primary-color;
+                        color: $background-color;
+                    }
                 }
 
                 &_contactButton {
                     background-color: $primary-color;
                     color: $background-color;
+
+                    &:hover {
+                        background-color: $primary-color-hover;
+                        border-color: $primary-color-hover;
+                    }
                 }
             }
 
@@ -106,7 +120,7 @@
     }
 }
 
-@media screen and (max-height: 700px ) and (max-width: 700px) {
+@media screen and (max-height: 700px) and (max-width: 700px) {
     .Default {
         &_home {
             padding: 2rem 0 !important;
