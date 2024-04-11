@@ -1,22 +1,20 @@
 /* Header Styles */
-@import '@templates/default/components/colors/colors.module.scss';
-@import '@templates/default/components/fonts/fonts.module.scss';
+@import "@templates/default/components/colors/colors.module.scss";
+@import "@templates/default/components/fonts/fonts.module.scss";
 
-.Default {
-    &_header {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
+.Header {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 
-        &_subText {
-            @include poppins-medium(1.1rem);
-            color: $secondary-color
-        }
+    &_subText {
+        @include poppins-medium(1.1rem);
+        color: $secondary-color;
+    }
 
-        &_heading {
-            @include poppins-semibold(2.5rem);
-            color: $primary-color;
-        }
+    &_heading {
+        @include poppins-semibold(2.5rem);
+        color: $primary-color;
     }
 }

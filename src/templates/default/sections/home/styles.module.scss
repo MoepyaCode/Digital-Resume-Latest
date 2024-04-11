@@ -2,110 +2,108 @@
 @import "@templates/default/components/fonts/fonts.module.scss";
 @import "@templates/default/components/mixin/mixin.module.scss";
 
-.Default {
-    &_home {
+.Home {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 !important;
+
+    &_image {
+        width: min(20rem, 80%);
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &_introWrapper {
+        position: relative;
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
-        padding: 0 !important;
 
-        &_image {
-            width: min(20rem, 80%);
-            aspect-ratio: 1/1;
-            border-radius: 50%;
-            object-fit: cover;
+        &_greeting {
+            @include poppins-semibold(1.1rem);
+            color: $secondary-color;
         }
 
-        &_introWrapper {
-            position: relative;
+        &_name {
+            @include poppins-bold(2.3rem);
+            color: $primary-color;
+            white-space: nowrap;
+        }
+
+        &_workType {
+            @include poppins-semibold(2.05rem);
+            letter-spacing: 0px;
+            color: $secondary-color;
+        }
+
+        &_buttonWrapper {
             display: flex;
-            flex-flow: column nowrap;
+            flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
+            gap: 1rem;
 
-            &_greeting {
-                @include poppins-semibold(1.1rem);
-                color: $secondary-color;
+            & button {
+                @include poppins-semibold(0.9rem);
+                margin: 0.5rem 0;
+                padding: 0.6rem 0.6rem;
+                letter-spacing: 0;
+                border: 2px solid $primary-color;
+                border-radius: 30px;
+                cursor: pointer;
+                transition:
+                    background-color 0.2s ease-in-out,
+                    color 0.2s ease-in-out;
             }
 
-            &_name {
-                @include poppins-bold(2.3rem);
+            &_cvButton {
+                background-color: transparent;
                 color: $primary-color;
-                white-space: nowrap;
-            }
 
-            &_workType {
-                @include poppins-semibold(2.05rem);
-                letter-spacing: 0px;
-                color: $secondary-color;
-            }
-
-            &_buttonWrapper {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: center;
-                align-items: center;
-                gap: 1rem;
-
-                & button {
-                    @include poppins-semibold(0.9rem);
-                    margin: 0.5rem 0;
-                    padding: 0.6rem 0.6rem;
-                    letter-spacing: 0;
-                    border: 2px solid $primary-color;
-                    border-radius: 30px;
-                    cursor: pointer;
-                    transition:
-                        background-color .2s ease-in-out,
-                        color .2s ease-in-out;
-                }
-
-                &_cvButton {
-                    background-color: transparent;
-                    color: $primary-color;
-
-                    &:hover {
-                        background-color: $primary-color;
-                        color: $background-color;
-                    }
-                }
-
-                &_contactButton {
+                &:hover {
                     background-color: $primary-color;
                     color: $background-color;
-
-                    &:hover {
-                        background-color: $primary-color-hover;
-                        border-color: $primary-color-hover;
-                    }
                 }
             }
 
-            &_linksWrapper {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: center;
-                align-items: center;
-                gap: 1rem;
+            &_contactButton {
+                background-color: $primary-color;
+                color: $background-color;
 
-                & a {
-                    @include poppins-semibold(2.75rem);
-                    color: $primary-color;
-                    text-decoration: none;
-                    cursor: pointer;
+                &:hover {
+                    background-color: $primary-color-hover;
+                    border-color: $primary-color-hover;
+                }
+            }
+        }
 
-                    &:first-of-type {
-                        background-color: $primary-color;
-                        border-radius: 50%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-size: 1.75rem;
-                        padding: 0.5rem;
-                        color: $background-color;
-                    }
+        &_linksWrapper {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            & a {
+                @include poppins-semibold(2.75rem);
+                color: $primary-color;
+                text-decoration: none;
+                cursor: pointer;
+
+                &:first-of-type {
+                    background-color: $primary-color;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.75rem;
+                    padding: 0.5rem;
+                    color: $background-color;
                 }
             }
         }
@@ -113,17 +111,13 @@
 }
 
 @media screen and (max-width: 700px) {
-    .Default {
-        &_home {
-            gap: 1rem;
-        }
+    .Home {
+        gap: 1rem;
     }
 }
 
 @media screen and (max-height: 700px) and (max-width: 700px) {
-    .Default {
-        &_home {
-            padding: 2rem 0 !important;
-        }
+    .Home {
+        padding: 2rem 0 !important;
     }
 }

@@ -2,18 +2,14 @@
 @import "@templates/default/components/fonts/fonts.module.scss";
 @import "@templates/default/components/mixin/mixin.module.scss";
 
-.Default {
+.Projects {
+    @include section-setup;
 
-    &_projects {
-        @include section-setup;
-
-        &_projectsWrapper {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-        }
+    &_projectsWrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
     }
-    
 }

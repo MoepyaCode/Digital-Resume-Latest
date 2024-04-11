@@ -6,6 +6,7 @@ import {
 } from '@templates/default/components/'
 import Styles from './styles.module.scss'
 import { SkillsBanner } from './components'
+import { Navigate } from '@templates/default/config'
 
 const tempData = {
     skillFields: [
@@ -38,13 +39,13 @@ const tempData = {
 
 export function Experience() {
     return (
-        <Section className={Styles.Default_experience}>
+        <Section className={Styles.Experience} id={Navigate.EXPERIENCE}>
             <Header
                 heading="Experience"
                 subText='Explore My'
             />
 
-            <Wrapper className={Styles.Default_experience_contentWrapper}>
+            <Wrapper className={Styles.Experience_contentWrapper}>
                 {tempData.skillFields.map((field, index) => (
                     <SkillsBanner
                         key={index}

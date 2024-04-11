@@ -2,69 +2,65 @@
 @import "@templates/default/components/colors/colors.module.scss";
 @import "@templates/default/components/mixin/mixin.module.scss";
 
-.Default {
-    &_navBar {
-        position: relative;
-        width: 100%;
+.NavBar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $background-color;
+    height: 5rem;
+    z-index: 1000;
+
+    &_landingPageBtn {
+        all: unset;
+        @include poppins-medium(30px);
+        color: $primary-color;
+        cursor: pointer;
+    }
+
+    & ul {
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
+        gap: 1.5rem;
         background-color: $background-color;
-        height: 5rem;
-        z-index: 1000;
 
-        &_landingPageBtn {
-            all: unset;
-            @include poppins-medium(30px);
-            color: $primary-color;
-            cursor: pointer;
-        }
-
-        & ul {
+        & li {
+            position: relative;
+            list-style: none;
+            height: 4rem;
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            background-color: $background-color;
 
-            & li {
-                position: relative;
-                list-style: none;
-                height: 4rem;
-                display: flex;
-
-                & button {
-                    @include navigation-button;
-                }
+            & button {
+                @include navigation-button;
             }
         }
     }
 }
 
 @media screen and (max-width: 700px) {
-    .Default {
-        &_navBar {
-            & ul {
-                position: absolute;
-                width: 50%;
-                top: 100%;
-                right: 0;
-                flex-flow: column nowrap;
-                align-items: stretch;
-                gap: 0;
+    .NavBar {
+        & ul {
+            position: absolute;
+            width: 50%;
+            top: 100%;
+            right: 0;
+            flex-flow: column nowrap;
+            align-items: stretch;
+            gap: 0;
 
-                & li {
-                    & button {
-                        transition: color 0.2s ease-in-out;
-                        &::after {
-                            all: unset;
-                        }
+            & li {
+                & button {
+                    transition: color 0.2s ease-in-out;
+                    &::after {
+                        all: unset;
+                    }
 
-                        &:hover {
-                            color: $secondary-color;
-                        }
+                    &:hover {
+                        color: $secondary-color;
                     }
                 }
             }

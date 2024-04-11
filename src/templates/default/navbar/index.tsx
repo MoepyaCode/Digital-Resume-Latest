@@ -1,6 +1,7 @@
 import React from 'react'
 import Styles from './styles.module.scss'
 import { BurgerMenuButton } from './burger-menu-button'
+import { Navigate } from '@templates/default/config'
 
 type Props = {
   name: string
@@ -9,6 +10,17 @@ type Props = {
 export function NavBar(props: Props) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const [displayMenu, setDisplayBurgerMenu] = React.useState(false)
+
+  const handleNavClick = (e: React.MouseEvent<HTMLButtonElement>, navigate: Navigate) => {
+    e.preventDefault()
+
+    const getElement = document.getElementById(navigate)
+
+    if (getElement) {
+      getElement.scrollIntoView({ behavior: 'smooth' })
+      setIsMenuOpen(false)
+    }
+  }
 
   React.useEffect(() => {
 
@@ -28,25 +40,49 @@ export function NavBar(props: Props) {
   }, [])
 
   return (
-    <nav className={Styles.Default_navBar}>
-      <button className={Styles.Default_navBar_landingPageBtn}>
+    <nav className={Styles.NavBar}>
+      <button
+        className={Styles.NavBar_landingPageBtn}
+        onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNavClick(e, Navigate.HOME)}
+      >
         {props.name}
       </button>
 
       {(!displayMenu || isMenuOpen) && (
         <ul>
+
           <li>
-            <button>About</button>
+            <button
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNavClick(e, Navigate.ABOUT)}
+            >
+              About
+            </button>
           </li>
+
           <li>
-            <button>Experience</button>
+            <button
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNavClick(e, Navigate.EXPERIENCE)}
+            >
+              Experience
+            </button>
           </li>
+
           <li>
-            <button>Projects</button>
+            <button
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNavClick(e, Navigate.PROJECTS)}
+            >
+              Projects
+            </button>
           </li>
+
           <li>
-            <button>Contact</button>
+            <button
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNavClick(e, Navigate.CONTACT)}
+            >
+              Contact
+            </button>
           </li>
+
         </ul>
       )}
 

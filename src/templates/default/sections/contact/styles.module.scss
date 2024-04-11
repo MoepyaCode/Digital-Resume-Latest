@@ -2,12 +2,8 @@
 @import "@templates/default/components/fonts/fonts.module.scss";
 @import "@templates/default/components/mixin/mixin.module.scss";
 
-.Default {
-
-    &_contact {
-        @include section-setup;
-        padding: 0;
-        background-color: $background-color;
-    }
-
+.Contact {
+    @include section-setup;
+    padding: 0;
+    background-color: $background-color;
 }

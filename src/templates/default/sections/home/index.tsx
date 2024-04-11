@@ -9,6 +9,7 @@ import {
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { Navigate } from "@templates/default/config";
 
 const tempData = {
     name: "John Doe",
@@ -18,36 +19,36 @@ const tempData = {
 
 export function Home() {
   return (
-    <Section className={Styles.Default_home}>
+    <Section className={Styles.Home} id={Navigate.HOME}>
         <Image
-          src="/images/face-card.jpg"
-          className={Styles.Default_home_image}
+          src="/images/image-1.jpg"
+          className={Styles.Home_image}
         />
 
         <Wrapper
-          className={Styles.Default_home_introWrapper}
+          className={Styles.Home_introWrapper}
         >
-          <p className={Styles.Default_home_introWrapper_greeting}>
+          <p className={Styles.Home_introWrapper_greeting}>
             {tempData.greeting}
           </p>
-          <p className={Styles.Default_home_introWrapper_name}>
+          <p className={Styles.Home_introWrapper_name}>
             {tempData.name}
           </p>
-          <p className={Styles.Default_home_introWrapper_workType}>
+          <p className={Styles.Home_introWrapper_workType}>
             {tempData.workType}
           </p>
 
-          <Wrapper className={Styles.Default_home_introWrapper_buttonWrapper}>
-            <Button className={Styles.Default_home_introWrapper_buttonWrapper_cvButton}>
+          <Wrapper className={Styles.Home_introWrapper_buttonWrapper}>
+            <Button className={Styles.Home_introWrapper_buttonWrapper_cvButton}>
               Downlod CV
             </Button>
 
-            <Button className={Styles.Default_home_introWrapper_buttonWrapper_contactButton}>
+            <Button className={Styles.Home_introWrapper_buttonWrapper_contactButton}>
               Contact Info
             </Button>
           </Wrapper>
 
-          <Wrapper className={Styles.Default_home_introWrapper_linksWrapper}>
+          <Wrapper className={Styles.Home_introWrapper_linksWrapper}>
               <Link to={'#'}>
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </Link>

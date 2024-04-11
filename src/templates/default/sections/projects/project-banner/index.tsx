@@ -11,7 +11,7 @@ export function ProjectBanner() {
     <Wrapper className={Styles.ProjectBanner}>
       <Image  
         className={Styles.ProjectBanner_image}
-        src='/images/face-card.jpg'
+        src='/images/image-2.jpg'
       />
 
       <p className={Styles.ProjectBanner_name}>DNA Extraction</p>

@@ -2,19 +2,15 @@
 @import "@templates/default/components/fonts/fonts.module.scss";
 @import "@templates/default/components/mixin/mixin.module.scss";
 
-.Default {
+.Experience {
+    @include section-setup;
 
-    &_experience {
-        @include section-setup;
-
-        &_contentWrapper {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-        }
-
+    &_contentWrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
     }
 
 }

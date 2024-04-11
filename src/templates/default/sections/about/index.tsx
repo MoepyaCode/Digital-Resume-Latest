@@ -4,6 +4,7 @@ import Styles from './styles.module.scss'
 import { Banner } from './components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCertificate } from '@fortawesome/free-solid-svg-icons'
+import { Navigate } from '@templates/default/config'
 
 const SectionInfo = {
   heading: "About Me",
@@ -15,22 +16,31 @@ const SectionInfo = {
 }
 
 export function About() {
+
+  React.useEffect(() => {
+
+    const section = document.querySelector('.About') as HTMLElement | null;
+
+    console.log(section)
+
+  }, [])
+
   return (
-    <Section className={Styles.Default_about}>
+    <Section className={Styles.About} id={Navigate.ABOUT}>
       <Header
         subText={SectionInfo.subText}
         heading={SectionInfo.heading}
       />
 
-      <Wrapper className={Styles.Default_about_contentWrapper}>
+      <Wrapper className={Styles.About_contentWrapper}>
         <Image
-          className={Styles.Default_about_contentWrapper_image}
-          src='/images/face-card.jpg'
+          className={Styles.About_contentWrapper_image}
+          src='/images/image-2.jpg'
         />
 
-        <Wrapper className={Styles.Default_about_contentWrapper_detailsWrapper}>
+        <Wrapper className={Styles.About_contentWrapper_detailsWrapper}>
           <Wrapper
-            className={Styles.Default_about_contentWrapper_detailsWrapper_bannersWrapper}
+            className={Styles.About_contentWrapper_detailsWrapper_bannersWrapper}
           >
             <Banner
               title='Experience'
@@ -47,7 +57,7 @@ export function About() {
             </Banner>
           </Wrapper>
 
-          <p className={Styles.Default_about_contentWrapper_detailsWrapper_text}>
+          <p className={Styles.About_contentWrapper_detailsWrapper_text}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio magni tempora nisi ducimus, fuga ad modi delectus veritatis esse iste aut libero, earum culpa possimus corrupti atque dolorem. Consequatur, eligendi.
             Omnis tempore dicta inventore.
           </p>
