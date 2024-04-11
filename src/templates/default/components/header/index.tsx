@@ -1,5 +1,5 @@
 import React from 'react'
-import { Wrapper } from '@digital-resume/templates/default/components'
+import { Wrapper } from '@templates/default/components/'
 import Styles from './styles.module.scss'	
 
 type Props = {

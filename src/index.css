@@ -16,11 +16,7 @@ body {
   position: relative;
   min-height: inherit;
 
-  & p {
-    pointer-events: none;
-  }
-
-  & h1 {
+  & h1, h3, p {
     pointer-events: none;
   }
 }

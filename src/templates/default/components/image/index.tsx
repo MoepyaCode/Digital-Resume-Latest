@@ -1,8 +1,8 @@
 import React from 'react'
 
 type Props = {
-    src: string
-    className: string
+    src?: string
+    className?: string
 }
 
 export function Image(props: Props) {

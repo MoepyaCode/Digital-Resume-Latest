@@ -1,4 +1,4 @@
-import { Wrapper } from '@digital-resume/templates/default/components'
+import { Wrapper } from '@templates/default/components/'
 import React from 'react'
 import Styles from './styles.module.scss'
 

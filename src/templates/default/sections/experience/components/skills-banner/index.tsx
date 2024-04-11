@@ -1,4 +1,4 @@
-import { Wrapper } from '@digital-resume/templates/default/components'
+import { Wrapper } from '@templates/default/components/'
 import SkillField from './skill-point'
 import Styles from './styles.module.scss'
 

@@ -23,16 +23,16 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@digital-resume/templates": [
+      "@templates": [
         "src/templates"
       ],
-      "@digital-resume/templates/*": [
+      "@templates/*": [
         "src/templates/*"
       ],
-      "@digital-resume/pages": [
+      "@pages": [
         "src/pages"
       ],
-      "@digital-resume/pages/*": [
+      "@pages/*": [
         "src/pages/*"
       ],
     }

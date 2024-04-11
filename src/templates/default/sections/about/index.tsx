@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Image, Section, Wrapper } from '@digital-resume/templates/default/components'
+import { Header, Image, Section, Wrapper } from '@templates/default/components/'
 import Styles from './styles.module.scss'
 import { Banner } from './components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import { Templates } from '@digital-resume/templates'
+import { Templates } from '@templates'
 
 export function Home() {
   return (

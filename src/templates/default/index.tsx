@@ -19,7 +19,9 @@ export function Default() {
       <Sections.Home />
       <Sections.About />
       <Sections.Experience />
-      
+      <Sections.Projects />
+      <Sections.Contact />
+
     </React.Fragment>
   );
 }

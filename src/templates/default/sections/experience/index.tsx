@@ -3,7 +3,7 @@ import {
     Header,
     Section,
     Wrapper,
-} from '@digital-resume/templates/default/components'
+} from '@templates/default/components/'
 import Styles from './styles.module.scss'
 import { SkillsBanner } from './components'
 
@@ -18,7 +18,7 @@ const tempData = {
                 { skill: 'HTML', experienceLevel: 'Intermediate' },
                 { skill: 'CSS', experienceLevel: 'Intermediate' },
                 { skill: 'JavaScript', experienceLevel: 'Advanced' },
-                { skill: 'TypeScript', experienceLevel: 'Advanced' },
+                // { skill: 'TypeScript', experienceLevel: 'Advanced' },
             ]
         },
         {
@@ -28,9 +28,9 @@ const tempData = {
                 { skill: 'Express', experienceLevel: 'Intermediate' },
                 { skill: 'Django', experienceLevel: 'Beginner' },
                 { skill: 'Flask', experienceLevel: 'Beginner' },
-                { skill: 'Spring Boot', experienceLevel: 'Intermediate' },
-                { skill: 'Java', experienceLevel: 'Advanced' },
-                { skill: 'Python', experienceLevel: 'Intermediate' },
+                // { skill: 'Spring Boot', experienceLevel: 'Intermediate' },
+                // { skill: 'Java', experienceLevel: 'Advanced' },
+                // { skill: 'Python', experienceLevel: 'Intermediate' },
             ]
         }
     ]

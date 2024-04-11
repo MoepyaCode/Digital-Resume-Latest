@@ -9,10 +9,10 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@digital-resume/templates': resolve(root, 'templates'),
-      '@digital-resume/templates/*': resolve(root, 'templates/*'),
-      '@digital-resume/pages': resolve(root, 'pages'),
-      '@digital-resume/pages/*': resolve(root, 'pages/*'),
+      '@templates': resolve(root, 'templates'),
+      '@templates/*': resolve(root, 'templates/*'),
+      '@pages': resolve(root, 'pages'),
+      '@pages/*': resolve(root, 'pages/*'),
     }
   }
 })

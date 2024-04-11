@@ -1,0 +1,9 @@
+/* Mixin function to be used through the Default Project */
+
+@mixin section-setup($gap: 2rem) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    aslign-items: center;
+    gap: $gap;
+}

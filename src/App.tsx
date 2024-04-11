@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom"
-import { Pages } from "@digital-resume/pages"
+import { Pages } from "@pages"
 
 function App() {
 

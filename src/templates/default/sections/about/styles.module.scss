@@ -1,12 +1,10 @@
-@import "@digital-resume/templates/default/components/colors/colors.module.scss";
-@import "@digital-resume/templates/default/components/fonts/fonts.module.scss";
+@import "@templates/default/components/colors/colors.module.scss";
+@import "@templates/default/components/fonts/fonts.module.scss";
+@import "@templates/default/components/mixin/mixin.module.scss";
 
 .Default {
-
     &_about {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 2rem;
+        @include section-setup;
 
         &_contentWrapper {
             display: flex;
@@ -32,7 +30,7 @@
 
                 &_bannersWrapper {
                     display: flex;
-                    flex-flow: row wrap; 
+                    flex-flow: row wrap;
                     justify-content: center;
                     align-items: center;
                     gap: 1rem;
@@ -49,27 +47,25 @@
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .Default {
         &_about {
             &_contentWrapper {
-    
                 &_image {
                 }
-    
+
                 &_detailsWrapper {
                     width: 80%;
-    
+
                     &_bannersWrapper {
-                     
                     }
-    
+
                     &_text {
-                       text-align: justify;
-                       width: 90%;
+                        text-align: justify;
+                        width: 90%;
                     }
                 }
             }
-        } 
+        }
     }
 }
