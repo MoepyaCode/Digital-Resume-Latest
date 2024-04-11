@@ -1,5 +1,6 @@
 @import "@templates/default/components/fonts/fonts.module.scss";
 @import "@templates/default/components/colors/colors.module.scss";
+@import "@templates/default/components/mixin/mixin.module.scss";
 
 .Default {
     &_navBar {
@@ -35,35 +36,7 @@
                 display: flex;
 
                 & button {
-                    all: unset;
-                    position: relative;
-                    @include poppins-medium(18px);
-                    width: 100%;
-                    padding: 0 0.5rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: $primary-color;
-                    cursor: pointer;
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: 0;
-                        height: 0.25rem;
-                        background-color: $secondary-color;
-                        left: 0;
-                        bottom: 0;
-                        transition: width 0.2s ease-in-out;
-                    }
-
-                    &:hover {
-                        color: $secondary-color;
-
-                        &::after {
-                            width: 100%;
-                        }
-                    }
+                    @include navigation-button;
                 }
             }
         }

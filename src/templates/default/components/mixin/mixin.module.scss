@@ -1,9 +1,44 @@
+@import "@templates/default/components/colors/colors.module.scss";
+@import "@templates/default/components/fonts/fonts.module.scss";
+
 /* Mixin function to be used through the Default Project */
 
 @mixin section-setup($gap: 2rem) {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    aslign-items: center;
+    align-items: center;
     gap: $gap;
+}
+
+@mixin navigation-button {
+    all: unset;
+    position: relative;
+    @include poppins-medium(18px);
+    width: 100%;
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary-color;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0.2rem;
+        background-color: $secondary-color;
+        left: 0;
+        bottom: 0;
+        transition: width 0.2s ease-in-out;
+    }
+
+    &:hover {
+        color: $secondary-color;
+
+        &::after {
+            width: 100%;
+        }
+    }
 }

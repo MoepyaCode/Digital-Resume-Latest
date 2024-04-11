@@ -5,6 +5,7 @@ import {
     Wrapper,
 } from '@templates/default/components/'
 import Styles from './styles.module.scss'
+import { ContactBanner } from './contact-banner'
 
 
 export function Contact() {
@@ -15,6 +16,7 @@ export function Contact() {
                 subText='Get In Touch'
             />
 
+            <ContactBanner />
         </Section>
     )
 }

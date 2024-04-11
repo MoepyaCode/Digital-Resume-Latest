@@ -1,0 +1,30 @@
+@import "@templates/default/components/colors/colors.module.scss";
+@import "@templates/default/components/fonts/fonts.module.scss";
+@import "@templates/default/components/mixin/mixin.module.scss";
+
+.Default {
+    &_footer {
+        @include section-setup;
+        padding-bottom: 2rem;
+
+        &_buttonsWrapper {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            & button {
+                @include navigation-button;
+                width: auto;
+                padding-bottom: 1rem;
+            }
+        }
+
+        &_copyright {
+            @include poppins-regular(14px);
+            color: $secondary-color;
+            text-align: center;
+        }
+    }
+}

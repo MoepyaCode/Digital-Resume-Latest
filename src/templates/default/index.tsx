@@ -1,6 +1,7 @@
 import React from "react";
 import { NavBar } from "./navbar";
 import { Sections } from "./sections";
+import { Footer } from "./footer";
 
 const tempData = {
   name: "John Doe",
@@ -21,6 +22,9 @@ export function Default() {
       <Sections.Experience />
       <Sections.Projects />
       <Sections.Contact />
+
+      {/* Footer */}
+      <Footer />
 
     </React.Fragment>
   );
