@@ -25,18 +25,18 @@
         align-items: center;
 
         &_greeting {
-            @include poppins-semibold(1.1rem);
+            @include poppins-semibold(1.9rem);
             color: $secondary-color;
         }
 
         &_name {
-            @include poppins-bold(2.3rem);
+            @include poppins-bold(1.9rem);
             color: $primary-color;
             white-space: nowrap;
         }
 
         &_workType {
-            @include poppins-semibold(2.05rem);
+            @include poppins-semibold(1.8rem);
             letter-spacing: 0px;
             color: $secondary-color;
         }
@@ -48,7 +48,8 @@
             align-items: center;
             gap: 1rem;
 
-            & button {
+            & button,
+            a {
                 @include poppins-semibold(0.9rem);
                 margin: 0.5rem 0;
                 padding: 0.6rem 0.6rem;
@@ -56,14 +57,17 @@
                 border: 2px solid $primary-color;
                 border-radius: 30px;
                 cursor: pointer;
-                transition:
-                    background-color 0.2s ease-in-out,
-                    color 0.2s ease-in-out;
             }
 
             &_cvButton {
                 background-color: transparent;
+                text-decoration: none;
                 color: $primary-color;
+                transition:
+                    background-color 0.2s ease-in-out,
+                    color 0.2s ease-in-out;
+
+                
 
                 &:hover {
                     background-color: $primary-color;
@@ -74,6 +78,9 @@
             &_contactButton {
                 background-color: $primary-color;
                 color: $background-color;
+                transition:
+                    background-color 0.2s ease-in-out,
+                    color 0.2s ease-in-out;
 
                 &:hover {
                     background-color: $primary-color-hover;
@@ -90,7 +97,7 @@
             gap: 1rem;
 
             & a {
-                @include poppins-semibold(2.75rem);
+                @include poppins-semibold(3.15rem);
                 color: $primary-color;
                 text-decoration: none;
                 cursor: pointer;
@@ -101,7 +108,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-size: 1.75rem;
+                    font-size: 2.15rem;
                     padding: 0.5rem;
                     color: $background-color;
                 }

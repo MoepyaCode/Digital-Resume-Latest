@@ -1,4 +1,4 @@
-import { Button } from "./button";
+import { NavigateButton } from "./navigate-button";
 import { Header } from "./header";
 import { Image } from "./image";
 import { Section } from "./section";
@@ -8,6 +8,6 @@ export {
     Section,
     Image,
     Wrapper,
-    Button,
+    NavigateButton,
     Header,
 }

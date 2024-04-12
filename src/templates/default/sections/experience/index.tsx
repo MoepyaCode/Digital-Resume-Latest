@@ -6,7 +6,7 @@ import {
 } from '@templates/default/components/'
 import Styles from './styles.module.scss'
 import { SkillsBanner } from './components'
-import { Navigate } from '@templates/default/config'
+import { ExperienceData, Navigate } from '@templates/default/config'
 
 const tempData = {
     skillFields: [
@@ -19,7 +19,7 @@ const tempData = {
                 { skill: 'HTML', experienceLevel: 'Intermediate' },
                 { skill: 'CSS', experienceLevel: 'Intermediate' },
                 { skill: 'JavaScript', experienceLevel: 'Advanced' },
-                // { skill: 'TypeScript', experienceLevel: 'Advanced' },
+                { skill: 'TypeScript', experienceLevel: 'Advanced' },
             ]
         },
         {
@@ -41,12 +41,12 @@ export function Experience() {
     return (
         <Section className={Styles.Experience} id={Navigate.EXPERIENCE}>
             <Header
-                heading="Experience"
-                subText='Explore My'
+                heading={ExperienceData.heading}
+                subText={ExperienceData.subText}
             />
 
             <Wrapper className={Styles.Experience_contentWrapper}>
-                {tempData.skillFields.map((field, index) => (
+                {ExperienceData.fields.map((field, index) => (
                     <SkillsBanner
                         key={index}
                         type={field.type}

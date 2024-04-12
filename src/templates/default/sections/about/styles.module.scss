@@ -48,15 +48,8 @@
 @media screen and (max-width: 768px) {
     .About {
         &_contentWrapper {
-            &_image {
-            }
-
             &_detailsWrapper {
                 width: 80%;
-
-                &_bannersWrapper {
-                }
-
                 &_text {
                     text-align: justify;
                     width: 90%;

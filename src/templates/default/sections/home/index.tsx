@@ -1,62 +1,55 @@
 import React from "react";
 import Styles from "./styles.module.scss";
 import {
-  Button,
   Image,
+  NavigateButton,
   Section,
-  Wrapper
+  Wrapper,
 } from "@templates/default/components/";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { Navigate } from "@templates/default/config";
-
-const tempData = {
-    name: "John Doe",
-    greeting: "Hello I'm",
-    workType: "Web Developer",
-  }
+import { HomeData, Navigate } from "@templates/default/config";
 
 export function Home() {
   return (
     <Section className={Styles.Home} id={Navigate.HOME}>
-        <Image
-          src="/images/image-1.jpg"
-          className={Styles.Home_image}
-        />
+      <Image src={HomeData.image} className={Styles.Home_image} />
 
-        <Wrapper
-          className={Styles.Home_introWrapper}
-        >
-          <p className={Styles.Home_introWrapper_greeting}>
-            {tempData.greeting}
-          </p>
-          <p className={Styles.Home_introWrapper_name}>
-            {tempData.name}
-          </p>
-          <p className={Styles.Home_introWrapper_workType}>
-            {tempData.workType}
-          </p>
+      <Wrapper className={Styles.Home_introWrapper}>
+        <p className={Styles.Home_introWrapper_greeting}>{HomeData.greeting}</p>
+        <p className={Styles.Home_introWrapper_name}>{HomeData.name}</p>
+        <p className={Styles.Home_introWrapper_workType}>{HomeData.workType}</p>
 
-          <Wrapper className={Styles.Home_introWrapper_buttonWrapper}>
-            <Button className={Styles.Home_introWrapper_buttonWrapper_cvButton}>
-              Downlod CV
-            </Button>
+        <Wrapper className={Styles.Home_introWrapper_buttonWrapper}>
+          <a
+            className={Styles.Home_introWrapper_buttonWrapper_cvButton}
+            href={HomeData.links.resume}
+            download
+          >
+            Download CV
+          </a>
 
-            <Button className={Styles.Home_introWrapper_buttonWrapper_contactButton}>
-              Contact Info
-            </Button>
-          </Wrapper>
-
-          <Wrapper className={Styles.Home_introWrapper_linksWrapper}>
-              <Link to={'#'}>
-                <FontAwesomeIcon icon={faLinkedinIn} />
-              </Link>
-            <Link to={'#'}>
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </Wrapper>
+          <NavigateButton
+            className={Styles.Home_introWrapper_buttonWrapper_contactButton}
+            navigate={Navigate.CONTACT}
+          >
+            Contact Info
+          </NavigateButton>
         </Wrapper>
-      </Section>
-  )
+
+        <Wrapper className={Styles.Home_introWrapper_linksWrapper}>
+          <Link
+            to={HomeData.links.linkedIn}
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </Link>
+          <Link to={HomeData.links.github} target="_blank">
+            <FontAwesomeIcon icon={faGithub} />
+          </Link>
+        </Wrapper>
+      </Wrapper>
+    </Section>
+  );
 }

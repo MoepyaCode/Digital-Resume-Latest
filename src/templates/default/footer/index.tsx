@@ -1,44 +1,47 @@
-import React from 'react'
-import Styles from './styles.module.scss'
-import { Wrapper } from '@templates/default/components'
-import { Navigate } from '@templates/default/config'
+import React from "react";
+import Styles from "./styles.module.scss";
+import { NavigateButton, Wrapper } from "@templates/default/components";
+import { Navigate } from "@templates/default/config";
 
 export function Footer() {
-
-    const handleNavClick = (e: React.MouseEvent<HTMLButtonElement>, navigate: Navigate) => {
-        e.preventDefault()
-
-        const getElement = document.getElementById(navigate)
-
-        if (getElement) {
-            getElement.scrollIntoView({ behavior: 'smooth' })
-        }
-    }
-
     return (
         <footer className={Styles.Footer}>
             <Wrapper className={Styles.Footer_buttonsWrapper}>
-                <button
-                    onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNavClick(e, Navigate.ABOUT)}
 
-                >About</button>
-                <button
-                    onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNavClick(e, Navigate.EXPERIENCE)}
+                {/* ABOUT Buttons */}
+                <NavigateButton
+                    navigate={Navigate.ABOUT}
+                >
+                    About
+                </NavigateButton>
 
-                >Experience</button>
-                <button
-                    onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNavClick(e, Navigate.PROJECTS)}
 
-                >Projects</button>
-                <button
-                    onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleNavClick(e, Navigate.CONTACT)}
+                {/* EXPERIENCE Buttons */}
+                <NavigateButton
+                    navigate={Navigate.EXPERIENCE}
+                >
+                    Experience
+                </NavigateButton>
 
-                >Contact</button>
+                {/* PROJECT Buttons */}
+                <NavigateButton
+                    navigate={Navigate.PROJECTS}
+                >
+                    Projects
+                </NavigateButton>
+
+                {/* CONTACT Buttons */}
+                <NavigateButton
+                    navigate={Navigate.CONTACT}
+                >
+                    Contact
+                </NavigateButton>
+
             </Wrapper>
 
             <p className={Styles.Footer_copyright}>
                 Copyright © 2021 John Doe. All rights reserved.
             </p>
         </footer>
-    )
+    );
 }

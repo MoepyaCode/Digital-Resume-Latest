@@ -13,11 +13,17 @@
     width: min(20rem, 90%);
     border: 2px solid $secondary-color;
     border-radius: 30px;
+    transition: scale 0.3s ease-in-out;
+
+    &:hover {
+       scale: 1.05;
+    }
 
     &_image {
         width: 80%;
         aspect-ratio: 1/1;
         border-radius: 30px;
+        object-fit: cover;
     }
 
     &_name {
@@ -31,7 +37,7 @@
         text-overflow: ellipsis;
     }
 
-    &_buttonsWrapper {
+    &_linksWrapper {
         width: 80%;
         display: flex;
         flex-flow: row nowrap;
@@ -39,8 +45,12 @@
         align-items: center;
         gap: 1rem;
 
-        & button {
+        & a {
             @include poppins-semibold(0.9rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
             width: 45%;
             color: $primary-color;
             border: 2px solid $secondary-color;
