@@ -66,7 +66,7 @@ const UserData = {
             title: 'Digital Resume Creator',
             image: '/images/projects/resume-creator.jpg',
             github: 'https://github.com/MoepyaCode/Resume-Creator',
-            liveDemo: null,
+            liveDemo: 'https://digital-resume-kagiso-moepya.netlify.app/',
         },
     ]
 }
