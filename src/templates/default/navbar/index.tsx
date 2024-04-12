@@ -1,14 +1,10 @@
 import React from 'react'
 import Styles from './styles.module.scss'
 import { BurgerMenuButton } from './burger-menu-button'
-import { Navigate } from '@templates/default/config'
+import { HomeData, Navigate } from '@templates/default/config'
 import { NavigateButton } from '../components'
 
-type Props = {
-  name: string
-}
-
-export function NavBar(props: Props) {
+export function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const [displayMenu, setDisplayBurgerMenu] = React.useState(false)
 
@@ -35,7 +31,7 @@ export function NavBar(props: Props) {
         className={Styles.NavBar_landingPageBtn}
         navigate={Navigate.HOME}
       >
-        {props.name}
+        {HomeData.name}
       </NavigateButton>
 
       {(!displayMenu || isMenuOpen) && (
