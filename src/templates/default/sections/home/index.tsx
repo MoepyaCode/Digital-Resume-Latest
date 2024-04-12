@@ -1,4 +1,3 @@
-import React from "react";
 import Styles from "./styles.module.scss";
 import {
   Image,

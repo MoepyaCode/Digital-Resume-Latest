@@ -1,4 +1,3 @@
-import React from 'react'
 import { Wrapper } from '@templates/default/components/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'

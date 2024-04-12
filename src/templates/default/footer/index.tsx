@@ -1,4 +1,3 @@
-import React from "react";
 import Styles from "./styles.module.scss";
 import { NavigateButton, Wrapper } from "@templates/default/components";
 import { Navigate } from "@templates/default/config";

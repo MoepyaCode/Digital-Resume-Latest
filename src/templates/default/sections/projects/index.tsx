@@ -1,9 +1,8 @@
-import React from 'react'
 import {
     Header,
     Section,
     Wrapper,
-} from '@templates/default/components//'
+} from '@templates/default/components/'
 import Styles from './styles.module.scss'
 import { ProjectBanner } from './project-banner'
 import { Navigate, ProjectsData } from '@templates/default/config'

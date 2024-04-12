@@ -1,4 +1,3 @@
-import React from 'react'
 import { Header, Image, Section, Wrapper } from '@templates/default/components/'
 import Styles from './styles.module.scss'
 import { Banner } from './components'

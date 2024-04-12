@@ -1,8 +1,6 @@
-import React from 'react'
 import {
     Header,
     Section,
-    Wrapper,
 } from '@templates/default/components/'
 import Styles from './styles.module.scss'
 import { ContactBanner } from './contact-banner'
