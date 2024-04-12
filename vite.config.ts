@@ -6,7 +6,6 @@ const root = resolve(__dirname, "src");
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Resume-Creator/',
   plugins: [react()],
   resolve: {
     alias: {
