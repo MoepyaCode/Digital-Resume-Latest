@@ -1,10 +1,12 @@
-import { Navigate } from '@templates/default/config'
 import React from 'react'
+import { Navigate } from '@templates/default/config'
 
 type Prop = {
     className?: string
     children: React.ReactNode
     navigate: Navigate
+    isMenuOpen?: boolean,
+    setIsMenuOpen?: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export function NavigateButton(props: Prop) {
