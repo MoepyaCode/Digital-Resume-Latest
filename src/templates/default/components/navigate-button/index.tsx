@@ -19,6 +19,10 @@ export function NavigateButton(props: Prop) {
         if (getElement) {
             getElement.scrollIntoView({ behavior: 'smooth' })
         }
+
+        if (props.isMenuOpen && props.setIsMenuOpen) {
+            props.setIsMenuOpen(false)
+        }
     }
 
     return (
