@@ -22,7 +22,7 @@ const UserData = {
     resume: '/documents/Resume-Kagiso-Moepya.pdf',
     images: {
         image_1: '/images/home/image-1.jpg',
-        image_2: '/images/home/image-1.jpg',
+        image_2: '/images/about/image-1.jpeg',
     },
     workType: 'FullStack Developer',
     development: {
