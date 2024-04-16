@@ -3,6 +3,7 @@ import Styles from './styles.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom'
 
 type Props = {
   email: string,
@@ -18,12 +19,12 @@ export function ContactBanner(props: Props) {
       </Wrapper>
       <Wrapper className={Styles.ContactBanner_contactWrapper}>
         <FontAwesomeIcon icon={faLinkedinIn} />
-          <a
-            href={props.linkedIn}
+          <Link
+            to={props.linkedIn}
             target="_blank"
           >
             LinkedIn
-          </a>
+          </Link>
       </Wrapper>
     </Wrapper>
   )

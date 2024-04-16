@@ -9,7 +9,7 @@
     border: 2px solid $secondary-color;
     padding: 1.25rem;
     border-radius: 30px;
-    width: min(27rem, 80%);
+    width: min(28rem, 80%);
 
     &_contactWrapper {
         display: flex;
@@ -22,7 +22,7 @@
             color: $background-color;
             font-size: 1rem;
             background-color: $primary-color;
-            padding: 0.5rem;
+            padding: 0.75rem;
             border-radius: 30px;
         }
 
