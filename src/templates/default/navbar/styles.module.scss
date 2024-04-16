@@ -3,7 +3,8 @@
 @import "@templates/default/components/mixin/mixin.module.scss";
 
 .NavBar {
-    position: relative;
+    position: sticky;
+    top: 0;
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -12,6 +13,7 @@
     background-color: $background-color;
     height: 5rem;
     z-index: 1000;
+    transition: box-shadow 0.2s ease-in-out;
 
     &_landingPageBtn {
         all: unset;
