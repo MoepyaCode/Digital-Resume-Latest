@@ -19,12 +19,12 @@ export function ContactBanner(props: Props) {
       </Wrapper>
       <Wrapper className={Styles.ContactBanner_contactWrapper}>
         <FontAwesomeIcon icon={faLinkedinIn} />
-          <Link
-            to={props.linkedIn}
-            target="_blank"
-          >
-            LinkedIn
-          </Link>
+        <Link
+          to={props.linkedIn}
+          target="_blank"
+        >
+          LinkedIn
+        </Link>
       </Wrapper>
     </Wrapper>
   )
