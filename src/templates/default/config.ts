@@ -35,6 +35,8 @@ const UserData = {
                 { skill: 'CSS', experienceLevel: 'Advanced' },
                 { skill: 'JavaScript', experienceLevel: 'Advanced' },
                 { skill: 'TypeScript', experienceLevel: 'Intermediate' },
+                { skill: 'Flutter', experienceLevel: 'Beginner' },
+
             ]
         },
         backend: {
@@ -45,6 +47,7 @@ const UserData = {
                 { skill: 'Express', experienceLevel: 'Intermediate' },
                 { skill: 'Java', experienceLevel: 'Intermediate' },
                 { skill: 'Python', experienceLevel: 'Intermediate' },
+                { skill: 'Firebase', experienceLevel: 'Intermediate' },
             ]
         },
         cloud: {
