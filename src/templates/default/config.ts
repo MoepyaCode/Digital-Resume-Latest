@@ -55,7 +55,7 @@ const UserData = {
             ]
         },
     },
-    projects : [
+    projects: [
         {
             title: 'DNA Extraction',
             image: '/images/projects/dna-extraction.png',
@@ -138,4 +138,8 @@ export const ContactData = {
     socials: {
         linkedIn: UserData.socials.linkedIn,
     }
+}
+
+export const FooterData = {
+    copyright: `Copyright © ${new Date().getFullYear()} ${UserData.name}. All rights reserved.`
 }

@@ -1,6 +1,6 @@
 import Styles from "./styles.module.scss";
 import { NavigateButton, Wrapper } from "@templates/default/components";
-import { Navigate } from "@templates/default/config";
+import { FooterData, Navigate } from "@templates/default/config";
 
 export function Footer() {
     return (
@@ -39,7 +39,7 @@ export function Footer() {
             </Wrapper>
 
             <p className={Styles.Footer_copyright}>
-                Copyright © 2021 John Doe. All rights reserved.
+                {FooterData.copyright}
             </p>
         </footer>
     );
