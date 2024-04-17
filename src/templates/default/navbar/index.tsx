@@ -33,9 +33,12 @@ export function NavBar() {
     function handleScrollPaddingTop() {
       const html = document.querySelector("html") as HTMLElement;
       
-      if (navRef.current) {
+      if (window.innerWidth <= 700 && navRef.current) {
         const navHeight = navRef.current.clientHeight;
         html.style.scrollPaddingTop = `${navHeight}px`;
+      } else if(navRef.current) {
+        const navHeight = navRef.current.clientHeight;
+        html.style.scrollPaddingTop = `${navHeight/2}px`;
       }
     }
 
