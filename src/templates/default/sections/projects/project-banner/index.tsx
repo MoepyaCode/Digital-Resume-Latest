@@ -1,39 +1,40 @@
-import {
-  Image,
-  Wrapper
-} from '@templates/default/components/'
-import Styles from './styles.module.scss'
-import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare, faCodeBranch, faMobileScreenButton, faServer } from '@fortawesome/free-solid-svg-icons'
+import type { Project } from '../../../config'
 
-type Props = {
-  title: string,
-  image: string,
-  github: string | null,
-  liveDemo: string | null,
+const projectIcons = {
+  mobile: faMobileScreenButton,
+  fullstack: faCodeBranch,
+  backend: faServer,
 }
 
-export function ProjectBanner(props: Props) {
+export function ProjectBanner({ project }: { project: Project }) {
   return (
-    <Wrapper className={Styles.ProjectBanner}>
-      <Image
-        className={Styles.ProjectBanner_image}
-        src={props.image}
-      />
+    <article className="project-card" aria-labelledby={project.id}>
+      <div className={`project-art project-art-${project.kind}`} aria-hidden="true">
+        <span className="project-symbol"><FontAwesomeIcon icon={projectIcons[project.kind]} /></span>
+      </div>
+      <div className="project-content">
+        <p className="eyebrow">{project.category}</p>
+        <h3 id={project.id}>{project.title}</h3>
+        <p className="project-description">{project.description}</p>
+        <ul className="tags" aria-label="Technologies">
+          {project.stack.map(tool => <li key={tool}>{tool}</li>)}
+        </ul>
 
-      <p className={Styles.ProjectBanner_name}>{props.title}</p>
+        <details className="project-details">
+          <summary>Implementation details</summary>
+          <ul>
+            {project.highlights.map(highlight => <li key={highlight}>{highlight}</li>)}
+          </ul>
+        </details>
 
-      <Wrapper className={Styles.ProjectBanner_linksWrapper}>
-        {props.github && (
-          <Link to={props.github} target='_blank'>
-            github
-          </Link>
+        {project.source && (
+          <a className="text-link project-source" href={project.source} aria-label={`View ${project.title} source on GitHub`}>
+            View source <FontAwesomeIcon icon={faArrowUpRightFromSquare} aria-hidden="true" />
+          </a>
         )}
-        {props.liveDemo && (
-          <Link to={props.liveDemo} target='_blank'>
-            Live Demo
-          </Link>
-        )}
-      </Wrapper>
-    </Wrapper>
+      </div>
+    </article>
   )
 }

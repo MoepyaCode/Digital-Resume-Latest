@@ -1,9 +1,0 @@
-@import "@templates/default/components/colors/colors.module.scss";
-@import "@templates/default/components/fonts/fonts.module.scss";
-@import "@templates/default/components/mixin/mixin.module.scss";
-
-.Contact {
-    @include section-setup;
-    padding: 0;
-    background-color: $background-color;
-}

@@ -1,46 +1,14 @@
-import Styles from "./styles.module.scss";
-import { NavigateButton, Wrapper } from "@templates/default/components";
-import { FooterData, Navigate } from "@templates/default/config";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { Navigate, Profile } from '../config'
 
 export function Footer() {
-    return (
-        <footer className={Styles.Footer}>
-            <Wrapper className={Styles.Footer_buttonsWrapper}>
-
-                {/* ABOUT Buttons */}
-                <NavigateButton
-                    navigate={Navigate.ABOUT}
-                >
-                    About
-                </NavigateButton>
-
-
-                {/* EXPERIENCE Buttons */}
-                <NavigateButton
-                    navigate={Navigate.EXPERIENCE}
-                >
-                    Experience
-                </NavigateButton>
-
-                {/* PROJECT Buttons */}
-                <NavigateButton
-                    navigate={Navigate.PROJECTS}
-                >
-                    Projects
-                </NavigateButton>
-
-                {/* CONTACT Buttons */}
-                <NavigateButton
-                    navigate={Navigate.CONTACT}
-                >
-                    Contact
-                </NavigateButton>
-
-            </Wrapper>
-
-            <p className={Styles.Footer_copyright}>
-                {FooterData.copyright}
-            </p>
-        </footer>
-    );
+  return (
+    <footer className="shell site-footer">
+      <p>© {new Date().getFullYear()} {Profile.name}</p>
+      <a className="text-link" href={`#${Navigate.HOME}`}>
+        Back to top <FontAwesomeIcon icon={faArrowUp} aria-hidden="true" />
+      </a>
+    </footer>
+  )
 }

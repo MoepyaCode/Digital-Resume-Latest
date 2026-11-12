@@ -1,123 +1,28 @@
-import React from "react";
-import Styles from "./styles.module.scss";
-import { BurgerMenuButton } from "./burger-menu-button";
-import { HomeData, Navigate } from "@templates/default/config";
-import { NavigateButton } from "../components";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { Navigate, Navigation, Profile } from '../config'
 
 export function NavBar() {
-  const navRef = React.useRef<HTMLDivElement>(null);
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [displayMenu, setDisplayBurgerMenu] = React.useState(false);
-
-  React.useLayoutEffect(() => {
-
-    function handleNavBoxShadow() {
-      if (navRef.current) {
-        if (window.scrollY > 0) {
-          navRef.current.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
-        } else {
-          navRef.current.style.boxShadow = "none";
-        }
-      }
-    }
-
-    window.addEventListener("scroll", handleNavBoxShadow);
-    handleNavBoxShadow();
-
-    return () => window.removeEventListener("scroll", handleNavBoxShadow);
-
-  }, [])
-
-  React.useLayoutEffect(() => {
-
-    function handleScrollPaddingTop() {
-      const html = document.querySelector("html") as HTMLElement;
-      
-      if (window.innerWidth <= 700 && navRef.current) {
-        const navHeight = navRef.current.clientHeight;
-        html.style.scrollPaddingTop = `${navHeight}px`;
-      } else if(navRef.current) {
-        const navHeight = navRef.current.clientHeight;
-        html.style.scrollPaddingTop = `${navHeight/2}px`;
-      }
-    }
-
-    window.addEventListener("resize", handleScrollPaddingTop);
-    handleScrollPaddingTop();
-
-    return () => window.removeEventListener("resize", handleScrollPaddingTop);
-
-  }, [])
-
-  React.useLayoutEffect(() => {
-    function handleResize() {
-      if (window.innerWidth <= 700) {
-        setDisplayBurgerMenu(true);
-      } else {
-        setDisplayBurgerMenu(false);
-      }
-    }
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
-    <nav ref={navRef} className={Styles.NavBar}>
-      <NavigateButton
-        className={Styles.NavBar_landingPageBtn}
+    <header className="site-header">
+      <div className="shell header-layout">
+        <a className="brand" href={`#${Navigate.HOME}`}>
+          <span className="brand-mark" aria-hidden="true">KM</span>
+          <span>{Profile.name}</span>
+        </a>
 
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-        navigate={Navigate.HOME}
-      >
-        {HomeData.name}
-      </NavigateButton>
+        <nav aria-label="Main navigation">
+          <ul className="nav-links">
+            {Navigation.map(({ label, target }) => (
+              <li key={target}><a href={`#${target}`}>{label}</a></li>
+            ))}
+          </ul>
+        </nav>
 
-      {(!displayMenu || isMenuOpen) && (
-        <ul>
-          <li>
-            <NavigateButton
-              isMenuOpen={isMenuOpen}
-              setIsMenuOpen={setIsMenuOpen}
-              navigate={Navigate.ABOUT}>About</NavigateButton>
-          </li>
-
-          <li>
-            <NavigateButton
-              isMenuOpen={isMenuOpen}
-              setIsMenuOpen={setIsMenuOpen}
-              navigate={Navigate.EXPERIENCE}>
-              Experience
-            </NavigateButton>
-          </li>
-
-          <li>
-            <NavigateButton
-              isMenuOpen={isMenuOpen}
-              setIsMenuOpen={setIsMenuOpen}
-              navigate={Navigate.PROJECTS}>
-              Projects
-            </NavigateButton>
-          </li>
-
-          <li>
-            <NavigateButton
-              isMenuOpen={isMenuOpen}
-              setIsMenuOpen={setIsMenuOpen}
-              navigate={Navigate.CONTACT}>Contact</NavigateButton>
-          </li>
-        </ul>
-      )}
-
-      {displayMenu && (
-        <BurgerMenuButton
-          isMenuOpen={isMenuOpen}
-          setIsMenuOpen={setIsMenuOpen}
-        />
-      )}
-    </nav>
-  );
+        <a className="header-social" href={Profile.github}>
+          GitHub <FontAwesomeIcon icon={faArrowUpRightFromSquare} aria-hidden="true" />
+        </a>
+      </div>
+    </header>
+  )
 }

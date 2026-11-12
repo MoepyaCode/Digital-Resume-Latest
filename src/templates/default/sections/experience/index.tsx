@@ -1,29 +1,41 @@
-import {
-    Header,
-    Section,
-    Wrapper,
-} from '@templates/default/components/'
-import Styles from './styles.module.scss'
-import { SkillsBanner } from './components'
-import { ExperienceData, Navigate } from '@templates/default/config'
+import { ExperienceData, Navigate } from '../../config'
 
 export function Experience() {
-    return (
-        <Section className={Styles.Experience} id={Navigate.EXPERIENCE}>
-            <Header
-                heading={ExperienceData.heading}
-                subText={ExperienceData.subText}
-            />
+  return (
+    <section className="experience-section" id={Navigate.EXPERIENCE} aria-labelledby="experience-title">
+      <div className="shell section-space experience-layout">
+        <div>
+          <h2 id="experience-title">Experience</h2>
+          <ol className="role-list">
+            {ExperienceData.roles.map(role => (
+              <li key={role.company}>
+                <div className="role-heading">
+                  <h3>{role.company}</h3>
+                  <span className="eyebrow">{role.period}</span>
+                </div>
+                <p className="role-focus">{role.focus}</p>
+                <p className="muted">{role.description}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
 
-            <Wrapper className={Styles.Experience_contentWrapper}>
-                {ExperienceData.fields.map((field, index) => (
-                    <SkillsBanner
-                        key={index}
-                        type={field.type}
-                        skills={field.skills}
-                    />
-                ))}
-            </Wrapper>
-        </Section>
-    )
+        <div className="toolkit">
+          <h3>Technical skills</h3>
+          <dl>
+            {ExperienceData.skills.map(({ label, tools }) => (
+              <div className="skill-group" key={label}>
+                <dt>{label}</dt>
+                <dd>
+                  <ul className="tags">
+                    {tools.map(tool => <li key={tool}>{tool}</li>)}
+                  </ul>
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
+    </section>
+  )
 }
