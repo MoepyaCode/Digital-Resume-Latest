@@ -30,7 +30,7 @@ export const ExperienceData = {
   roles: [
     {
       company: 'BETSoftware',
-      focus: 'Mobile development',
+      focus: 'Intermediate Software Developer',
       period: 'Current',
       description: 'I work on React Native mobile applications using TypeScript and Maestro for end-to-end testing.',
     },

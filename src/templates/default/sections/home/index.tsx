@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown, faArrowUpRightFromSquare, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faArrowDown, faArrowUpRightFromSquare, faFileArrowDown, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { Navigate, Profile } from '../../config'
 
 export function Home() {
@@ -14,6 +14,9 @@ export function Home() {
           <div className="actions">
             <a className="button button-primary" href={`#${Navigate.PROJECTS}`}>
               View selected work <FontAwesomeIcon icon={faArrowDown} aria-hidden="true" />
+            </a>
+            <a className="button button-ghost" href={`${import.meta.env.BASE_URL}documents/Resume-Kagiso-Moepya.pdf`} download="Kagiso-Moepya-CV.pdf">
+              Download CV <FontAwesomeIcon icon={faFileArrowDown} aria-hidden="true" />
             </a>
             <a className="button button-ghost" href={Profile.linkedin}>
               LinkedIn <FontAwesomeIcon icon={faArrowUpRightFromSquare} aria-hidden="true" />

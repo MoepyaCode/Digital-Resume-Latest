@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faFileLines } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { Navigate, Profile } from '../../config'
 
 export function Contact() {
@@ -14,8 +14,8 @@ export function Contact() {
           <a className="button button-primary" href={`mailto:${Profile.email}`}>
             Email me <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
           </a>
-          <a className="button button-ghost" href={`mailto:${Profile.email}?subject=CV%20request`}>
-            Request CV <FontAwesomeIcon icon={faFileLines} aria-hidden="true" />
+          <a className="button button-ghost" href={`${import.meta.env.BASE_URL}documents/Resume-Kagiso-Moepya.pdf`} download="Kagiso-Moepya-CV.pdf">
+            Download CV <FontAwesomeIcon icon={faFileArrowDown} aria-hidden="true" />
           </a>
         </div>
       </div>
