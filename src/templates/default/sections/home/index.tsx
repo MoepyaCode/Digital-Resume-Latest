@@ -1,54 +1,37 @@
-import Styles from "./styles.module.scss";
-import {
-  Image,
-  NavigateButton,
-  Section,
-  Wrapper,
-} from "@templates/default/components/";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { HomeData, Navigate } from "@templates/default/config";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowDown, faArrowUpRightFromSquare, faFileArrowDown, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { Navigate, Profile } from '../../config'
 
 export function Home() {
   return (
-    <Section className={Styles.Home} id={Navigate.HOME}>
-      <Image src={HomeData.image} className={Styles.Home_image} />
+    <section className="hero" id={Navigate.HOME} aria-labelledby="home-title">
+      <div className="shell hero-layout">
+        <div className="hero-content">
+          <p className="availability"><span aria-hidden="true" />{Profile.availability}</p>
+          <h1 id="home-title">{Profile.name}</h1>
+          <p className="hero-role">{Profile.title} <span>·</span> Mobile & full stack</p>
+          <p className="hero-summary">{Profile.summary}</p>
+          <div className="actions">
+            <a className="button button-primary" href={`#${Navigate.PROJECTS}`}>
+              View selected work <FontAwesomeIcon icon={faArrowDown} aria-hidden="true" />
+            </a>
+            <a className="button button-ghost" href={`${import.meta.env.BASE_URL}documents/Resume-Kagiso-Moepya.pdf`} download="Kagiso-Moepya-CV.pdf">
+              Download CV <FontAwesomeIcon icon={faFileArrowDown} aria-hidden="true" />
+            </a>
+            <a className="button button-ghost" href={Profile.linkedin}>
+              LinkedIn <FontAwesomeIcon icon={faArrowUpRightFromSquare} aria-hidden="true" />
+            </a>
+          </div>
+          <ul className="hero-facts">
+            <li><strong>{Profile.experience}</strong> of development experience</li>
+            <li><FontAwesomeIcon icon={faLocationDot} aria-hidden="true" /> {Profile.location}</li>
+          </ul>
+        </div>
 
-      <Wrapper className={Styles.Home_introWrapper}>
-        <p className={Styles.Home_introWrapper_greeting}>{HomeData.greeting}</p>
-        <p className={Styles.Home_introWrapper_name}>{HomeData.name}</p>
-        <p className={Styles.Home_introWrapper_workType}>{HomeData.workType}</p>
-
-        <Wrapper className={Styles.Home_introWrapper_buttonWrapper}>
-          <a
-            className={Styles.Home_introWrapper_buttonWrapper_cvButton}
-            href={HomeData.links.resume}
-            download
-          >
-            Download CV
-          </a>
-
-          <NavigateButton
-            className={Styles.Home_introWrapper_buttonWrapper_contactButton}
-            navigate={Navigate.CONTACT}
-          >
-            Contact Info
-          </NavigateButton>
-        </Wrapper>
-
-        <Wrapper className={Styles.Home_introWrapper_linksWrapper}>
-          <Link
-            to={HomeData.links.linkedIn}
-            target="_blank"
-          >
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </Link>
-          <Link to={HomeData.links.github} target="_blank">
-            <FontAwesomeIcon icon={faGithub} />
-          </Link>
-        </Wrapper>
-      </Wrapper>
-    </Section>
-  );
+        <div className="portrait">
+          <img src={Profile.image} alt={Profile.name} width="768" height="1024" fetchPriority="high" />
+        </div>
+      </div>
+    </section>
+  )
 }

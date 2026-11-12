@@ -1,47 +1,13 @@
-import { Header, Image, Section, Wrapper } from '@templates/default/components/'
-import Styles from './styles.module.scss'
-import { Banner } from './components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCertificate } from '@fortawesome/free-solid-svg-icons'
-import { AboutData, Navigate } from '@templates/default/config'
-
+import { Navigate } from '../../config'
 
 export function About() {
   return (
-    <Section className={Styles.About} id={Navigate.ABOUT}>
-      <Header
-        subText={AboutData.subText}
-        heading={AboutData.heading}
-      />
-
-      <Wrapper className={Styles.About_contentWrapper}>
-        <Image
-          className={Styles.About_contentWrapper_image}
-          src={AboutData.image}
-        />
-
-        <Wrapper className={Styles.About_contentWrapper_detailsWrapper}>
-          <Wrapper
-            className={Styles.About_contentWrapper_detailsWrapper_bannersWrapper}
-          >
-
-            {AboutData.bannerDetails.map((details, index) => (
-              <Banner
-                key={index}
-                title={details.title}
-                details={details.details}
-              >
-                <FontAwesomeIcon icon={faCertificate} />
-              </Banner>
-            ))}
-
-          </Wrapper>
-
-          <p className={Styles.About_contentWrapper_detailsWrapper_text}>
-            {AboutData.about}
-          </p>
-        </Wrapper>
-      </Wrapper>
-    </Section >
+    <section className="shell section-space about-layout" id={Navigate.ABOUT} aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
+      <div className="about-copy">
+        <p>I’m a South African software engineer. My work spans mobile features, web interfaces and the APIs that connect them.</p>
+        <p>I’m interested in building AI-powered applications, especially where AI can help users make sense of messy information or reduce manual work.</p>
+      </div>
+    </section>
   )
 }

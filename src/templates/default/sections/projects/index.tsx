@@ -1,31 +1,20 @@
-import {
-    Header,
-    Section,
-    Wrapper,
-} from '@templates/default/components/'
-import Styles from './styles.module.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { Navigate, Profile, Projects as selectedProjects } from '../../config'
 import { ProjectBanner } from './project-banner'
-import { Navigate, ProjectsData } from '@templates/default/config'
 
 export function Projects() {
-    return (
-        <Section className={Styles.Projects} id={Navigate.PROJECTS}>
-            <Header
-                heading={ProjectsData.heading}
-                subText={ProjectsData.subText}
-            />
-
-            <Wrapper className={Styles.Projects_projectsWrapper}>
-                {ProjectsData.projects.map((project, index) => (
-                    <ProjectBanner
-                        key={index}
-                        image={project.image}
-                        title={project.title}
-                        github={project.github}
-                        liveDemo={project.liveDemo}
-                    />
-               ))}
-            </Wrapper>
-        </Section>
-    )
+  return (
+    <section className="shell section-space" id={Navigate.PROJECTS} aria-labelledby="projects-title">
+      <div className="section-heading section-heading-with-link">
+        <h2 id="projects-title">Selected work</h2>
+        <a className="text-link" href={Profile.github}>
+          More on GitHub <FontAwesomeIcon icon={faArrowUpRightFromSquare} aria-hidden="true" />
+        </a>
+      </div>
+      <div className="project-grid">
+        {selectedProjects.map(project => <ProjectBanner key={project.id} project={project} />)}
+      </div>
+    </section>
+  )
 }
